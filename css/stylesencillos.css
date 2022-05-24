@@ -1,0 +1,253 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ------------------------------------------- */
+
+*{
+    box-sizing: border-box;
+}
+
+.sitios{
+    display: flex;
+    width: 40%;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 14%;
+    margin-left: 31%;
+}
+
+#sitios_oficiales{
+    display: flex;
+    width: 100%;
+    height: 120px;
+    align-items: center;
+    background-color: black;
+}
+
+#pagina_oficial{
+    display: flex;
+    background-color: rgb(26, 236, 26);
+    width: 15%;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    margin-right: 5%;
+}
+
+#navegacion{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+}
+
+#navegacion nav{
+    width: 30%;
+    margin-right: 3%;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+.menu li a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 20px 10px;
+    color: rgb(0, 0, 0);
+    
+}
+
+.menu a:hover{
+    border-bottom: solid 5px  rgb(250, 152, 25);
+    color:  rgb(250, 152, 25);
+}
+
+/* --- main ---------------------------------- */
+
+main{
+    width: 100%;
+    display: flex;
+    background-color: rgb(207, 207, 207);
+}
+.caja{
+    width: 80%;
+    background-color: white;
+    margin: 0 auto;
+}
+
+.titulo{
+    width: 100%;
+    display: flex;
+    padding: 5%;
+    background-color: black;
+}
+
+.titulo h1{
+    margin: 0 auto;
+    color: white;
+}
+
+.caja ul{
+    margin-left: 10%;
+}
+
+.caja a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.caja li{
+    width: 75%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-bottom: solid 3px black;
+}
+
+.lista_sencillos a:hover{
+    color: rgb(250, 152, 25);
+}
+
+
+/* --- Pie de página ------------------------- */
+
+.pie_pagina{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    background-color: black;
+}
+
+.pie_pagina .info_creador{
+    color: white;
+    margin: auto;
+}
+
+.pie_pagina .info_creador_2{
+    display: none;
+}
+
+/* Media queries ----------------------------- */
+@media screen and (max-width: 1024px){
+    #pagina_oficial{
+        font-size: 0.7rem;
+    }
+    .menu li a{
+        font-size: 0.9rem;
+    }
+
+    #navegacion nav{
+        width: 40%;
+    }
+
+    .sitios img{
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 768px){
+     /* Estilos para el encabeado y el menu */
+     #sitios_oficiales{
+        display: none;
+    }
+    
+    #navegacion{
+        flex-direction: column;
+    }
+
+    #navegacion img{
+        width: 320px;
+    }
+
+    #navegacion nav{
+        display: block;
+        width: 100%;
+        margin-right: 0px;
+        background-color: black;
+    }
+
+    .menu li{
+        display: block;
+        width: 100%;
+        padding: 20px 10px;
+        border-bottom: solid 3px white;
+    }
+
+    .menu li a{
+        color: white;
+    }
+
+    #navegacion li{
+        margin-bottom: solid 3px white;
+    }
+
+    /* Estilos para el main */
+
+    .caja{
+        width: 100%;
+    }
+
+    .caja .titulo{
+        background-color: rgb(250, 152, 25);
+    }
+
+    /* Estilos para el pie de página */
+    .pie_pagina .info_creador{
+        display: none;
+    }
+
+    .pie_pagina .info_creador_2{
+        display: block;
+        font-size: 2rem;
+        color: white;
+        margin: auto;
+    }
+
+}
